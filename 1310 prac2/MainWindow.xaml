@@ -1,0 +1,45 @@
+﻿<Window x:Class="_1310_prac2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1310_prac2"
+        xmlns:res="clr-namespace:_1310_prac2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="300"
+        MaxHeight="250" MaxWidth="300"
+        MinHeight="250" MinWidth="300">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="{x:Static res:lang.lblName_text}" x:Name="lblName" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                <Label Content="{x:Static res:lang.lblSurname_text}" x:Name="lblSurname" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                <Label Content="{x:Static res:lang.lblPhone_text}" x:Name="lblPhone" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtBoxName" Grid.Row="0" Grid.Column="1" Margin="12"/>
+                <TextBox x:Name="txtBoxSurname" Grid.Row="1" Grid.Column="1" Margin="12"/>
+                <TextBox x:Name="txtBoxPhone" Grid.Row="2" Grid.Column="1" Margin="12"/>
+                <WrapPanel Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button x:Name="OKButton" Content="OK" Width="50" Margin="10"/>
+                    <Button x:Name="CancelButton" Content="{x:Static res:lang.CancelButton_text}" Width="50" Margin="10"/>
+                </WrapPanel>
+            </Grid>
+            <Button Content="{x:Static res:lang.ChangeLangButton_text}" x:Name="ChangeLangButton" Grid.Row="2" Margin="5" Click="ChangeLangButton_Click"/>
+
+        </Grid>
+    </Grid>
+</Window>
